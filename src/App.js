@@ -8,12 +8,14 @@ const App = () => {
     a: "Ти повинна бути!",
     tag: 0
   });
-  const [category, setCategory] = useState("firstTen")
+  const [category, setCategory] = useState("firstTen");
+  const [flip, setFlip] = useState(false);
 
   const clr = () => {
     let newSamp = questions[category];
     newSamp.map((val) => (val.tag = 0));
     setQuestion({ q: "Готова?", a: "Ти повинна бути!", tag: 0 });
+    setFlip(false)
   };
 
   const categ = (e) => {
@@ -25,7 +27,7 @@ const App = () => {
     let newSamp = questions[category];
     newSamp = newSamp.filter((val) => val.tag === 0);
     if (newSamp.length === 0) {
-       setQuestion({ q: "Кінец", a: "Так-так, це кінець", tag: 0 });
+       setQuestion({ q: "Кінець", a: "Так-так, це кінець!", tag: 0 });
      } else {
       let n = Math.floor(Math.random() * newSamp.length);
       setQuestion(newSamp[n]);
@@ -47,7 +49,11 @@ const App = () => {
       </form>
       <div className="main">
         <div className="card_wrapper">
-        <Card question={question} />
+        <Card
+        flipp={flip}
+        question={question}
+        
+        />
         </div>
         <button className="next" onClick={next}><p>Next</p></button>
       </div>

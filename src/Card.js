@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 
-export default function Card({ question }) {
-  const [flip, setFlip] = useState(false);
+export default function Card({ question, flipp }) {
+  const [flip, setFlip] = useState(flipp);
   return (
     <div
       className={`card ${flip ? "flip" : ""}`}
