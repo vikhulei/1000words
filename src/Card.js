@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 
 
-export default function Card({ question, flipp }) {
-  const [flip, setFlip] = useState(flipp);
+export default function Card({ question, flip, onFlipChange }) {
+
   return (
     <div
       className={`card ${flip ? "flip" : ""}`}
       onClick={() => {
-        setFlip(!flip);
-      }}
+        onFlipChange(!flip)
+      }
+      }
     >
       <div className="front">{question.q}</div>
       <div className="back">{question.a}</div>

@@ -10,7 +10,7 @@ const Questions = {
     {q: 'Круто', a: 'Cool', tag:0},
     {q: 'Гратися', a: 'Play', tag:0},
     {q: 'Домашнє завдання', a: 'Homework', tag:0},
-    {q: 'Бвтьки', a: 'Parents', tag:0},
+    {q: 'Батьки', a: 'Parents', tag:0},
   ],
 
   secondTen: [

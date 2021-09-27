@@ -7,21 +7,44 @@ body {
 }
 
 .category {
-  margin-top: 20px;
+  width: 500px;
+  max-width: 90vw;
+  margin: 20px auto 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .category select {
   height: 60px;
-  width: 475px;
-  max-width: 90vw;
+  width: 65%;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 600;
   color: rgb(218, 216, 216);
   background-color: rgb(2, 69, 114);
-  border-radius: 8px;;
+  border-radius: 8px;
+}
+
+.repeat {
+  height: 60px;
+  width: 25%;
+  max-width: 20vw;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: rgb(95, 3, 3);
+  border-radius: 8px;
+}
+
+.repeat label {
+  font-size: 2rem;
+}
+
+.repeat input[type=checkbox] {
+  transform: scale(2.5);
 }
 
 .main {
@@ -48,7 +71,7 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transition: 350ms;
+  transition: 150ms;
 }
 
 .card.flip {
